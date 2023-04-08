@@ -43,26 +43,28 @@ function WeatherApp() {
   const dayImage = { uri: `https://i.pinimg.com/736x/ea/c6/ea/eac6ea25d769c0df6de84d6ba113b160.jpg` }
   const rainImage = { uri: `https://i.pinimg.com/736x/95/42/3e/95423eca5f5a645580a23535e46235c2.jpg` }
   const dayImage2 = { uri: `https://i.pinimg.com/originals/91/37/e4/9137e4d5521510779a33b917213689d7.png` }
+  const blueImage = { uri: `https://i.stack.imgur.com/wvNCf.png` }
+  const cloudImage = { uri: `https://cdn5.f-cdn.com/contestentries/329593/18088126/5699feb841990_thumb900.jpg` }
+  const lightImage = { uri: `https://media.istockphoto.com/id/1178256163/vi/vec-to/weather-app-thi%E1%BA%BFt-k%E1%BA%BF-thi%E1%BA%BFt-k%E1%BA%BF-m%C3%A0n-h%C3%ACnh-giao-l%C6%B0u-giao-th%C3%B4ng-hi%E1%BB%87n-%C4%91%E1%BA%A1i-cho-%E1%BB%A9ng-d%E1%BB%A5ng-di-%C4%91%E1%BB%99ng-v%E1%BB%9Bi.jpg?s=170667a&w=0&k=20&c=46Yr8T4Yc5FAY-Ma7zui6Bn07CkB01lYSLdz1NjTxTs=` }
 
   const arr = weather.map((w) => w.currentConditions.conditions)
   const windowWidth = Dimensions.get('window').width;
 
   return (
-    <ImageBackground source={arr[0] == "Clear" ? nightImage : rainImage} resizeMode={"cover"}
+    <ImageBackground source={arr[0] == "Clear" ? cloudImage : lightImage} resizeMode={"cover"}
       style={{
         height: "100%", //only according to the phone im using
         width: "100%",
         margin: 0,
         display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"
       }}>
+      <TouchableOpacity onPress={() => navigation.navigate("Benzema")}>
+        <Text>Change</Text>
+      </TouchableOpacity>
       <ScrollView contentContainerStyle={{
         alignItems: "center",
         marginTop: 80
       }}>
-        <TouchableOpacity onPress={() => navigation.navigate("Benzema")}>
-          <Text>                 </Text>
-        </TouchableOpacity>
-
         <View className="input-and-btn"
           style={{
             flexDirection: "row",

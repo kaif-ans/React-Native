@@ -20,8 +20,8 @@ function Screen() {
 
     return (
         <ScrollView style={{ backgroundColor: "white" }}>
-            <TouchableOpacity onPress={() => navigation.navigate("App2")}>
-                <Text>                   </Text>
+            <TouchableOpacity onPress={() => navigation.navigate("Offers")}>
+                <Text>Change</Text>
             </TouchableOpacity>
 
             <View>
@@ -29,8 +29,8 @@ function Screen() {
                     style={styles.input}
                     placeholder="Search"
                 >
-                    <Text style={styles.search}>Seacrh  </Text>
-                    <Image source={searchIcon} style={styles.searchIcon} />
+                    <Text style={styles.search}></Text>
+                    {/* <Image source={searchIcon} style={styles.searchIcon} /> */}
                 </TextInput>
             </View>
             <Text></Text>
@@ -70,41 +70,55 @@ function Screen() {
             <Text style={styles.msg}>Messages ❤️</Text>
 
             <View style={styles.player_msg_full_div}>
-                <View style={styles.player_msg_div}>
-                    <Image source={valverde} style={styles.img} />
-                    <View>
-                        <Text style={styles.player_name}>Valverde</Text>
-                        <Text style={styles.player_msg}>Meet me in traning!</Text>
+                <TouchableOpacity>
+                    <View style={styles.player_msg_div}>
+                        <Image source={valverde} style={styles.img} />
+                        <View>
+                            <Text style={styles.player_name}>Valverde</Text>
+                            <Text style={styles.player_msg}>Meet me in traning!</Text>
+                        </View>
                     </View>
-                </View>
-                <View style={styles.player_msg_div}>
-                    <Image source={tb1} style={styles.img} />
-                    <View>
-                        <Text style={styles.player_name}>Courtios</Text>
-                        <Text style={styles.player_msg}>I won't let you score against me</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <View style={styles.player_msg_div}>
+                        <Image source={tb1} style={styles.img} />
+                        <View>
+                            <Text style={styles.player_name}>Courtios</Text>
+                            <Text style={styles.player_msg}>I won't let you score against me</Text>
+                        </View>
                     </View>
-                </View>
-                <View style={styles.player_msg_div}>
-                    <Image source={carlo} style={styles.img} />
-                    <View>
-                        <Text style={styles.player_name}>Ancelotti</Text>
-                        <Text style={styles.player_msg}>Tomorrow there's holiday</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <View style={styles.player_msg_div}>
+                        <Image source={carlo} style={styles.img} />
+                        <View>
+                            <Text style={styles.player_name}>Ancelotti</Text>
+                            <Text style={styles.player_msg}>Tomorrow there's holiday</Text>
+                        </View>
                     </View>
-                </View>
-                <View style={styles.player_msg_div}>
-                    <Image source={rodri} style={styles.img} />
-                    <View>
-                        <Text style={styles.player_name}>Rodrygo</Text>
-                        <Text style={styles.player_msg}>No I can't make it man, I'm busy</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <View style={styles.player_msg_div}>
+                        <Image source={rodri} style={styles.img} />
+                        <View>
+                            <Text style={styles.player_name}>Rodrygo</Text>
+                            <Text style={styles.player_msg}>No I can't make it man, I'm busy</Text>
+                        </View>
                     </View>
-                </View>
-                <View style={styles.player_msg_div}>
-                    <Image source={asen} style={styles.img} />
-                    <View>
-                        <Text style={styles.player_name}>Asensio</Text>
-                        <Text style={styles.player_msg}>Sure, I'll call you after that</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <View style={styles.player_msg_div}>
+                        <Image source={asen} style={styles.img} />
+                        <View>
+                            <Text style={styles.player_name}>Asensio</Text>
+                            <Text style={styles.player_msg}>Sure, I'll call you after that</Text>
+                        </View>
                     </View>
-                </View>
+                </TouchableOpacity>
             </View>
 
         </ScrollView>

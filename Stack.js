@@ -2,7 +2,7 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import App2 from './App2'
+import Offers from './Offers'
 import Screen from './Screen'
 import Benzema from './Benzema'
 import WeatherApp from './WeatherApp';
@@ -13,11 +13,12 @@ const Stack = () => {
 
     return (
         <NavigationContainer >
-            <Stack.Navigator initialRouteName='Screen' screenOptions={{ headerShown: false }}>
-                <Stack.Screen name='App2' component={App2} />
+            <Stack.Navigator initialRouteName='Benzema' screenOptions={{ headerShown: false }}>
+                <Stack.Screen name='Offers' component={Offers} />
                 <Stack.Screen name='Screen' component={Screen} />
                 <Stack.Screen name='Benzema' component={Benzema} />
                 <Stack.Screen name='WeatherApp' component={WeatherApp} />
+                <Stack.Screen name='BookApp' component={BookApp} />
             </Stack.Navigator>
         </NavigationContainer>
     )

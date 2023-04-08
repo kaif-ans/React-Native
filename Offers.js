@@ -3,7 +3,7 @@ import { Dimensions, Image, ScrollView, StyleSheet, Text, View, TouchableOpacity
 import Card from './Card'
 import { useNavigation } from '@react-navigation/native'
 
-function App2() {
+function Offers() {
     const windowWidth = Dimensions.get('window').height
     const navigation = useNavigation()
 
@@ -34,14 +34,20 @@ function App2() {
     return (
         <View style={[styles.body, { height: windowWidth }]}>
             <TouchableOpacity onPress={() => navigation.navigate("WeatherApp")}>
-                <Text style={styles.hrs}>Screen 2</Text>
+                <Text style={styles.hrs}>Change</Text>
             </TouchableOpacity>
 
             <Text style={styles.offers}> ➜ Offers</Text>
             <View style={styles.text_div}>
-                <Text style={styles.flights}>Flights</Text>
-                <Text style={styles.hotels}>Hotels</Text>
-                <Text style={styles.trips}>Trips</Text>
+                <TouchableOpacity>
+                    <Text style={styles.flights}>Flights</Text>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Text style={styles.hotels}>Hotels</Text>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Text style={styles.trips}>Trips</Text>
+                </TouchableOpacity>
             </View>
             <Text></Text>
 
@@ -106,4 +112,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default App2
+export default Offers

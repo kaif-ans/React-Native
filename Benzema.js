@@ -19,8 +19,8 @@ function App() {
         // style={{ height: windowWidth }}
         >
             <View>
-                <TouchableOpacity onPress={() => navigation.navigate("Screen")}>
-                    <Text>Screen 1</Text>
+                <TouchableOpacity onPress={() => navigation.navigate("BookApp")}>
+                    <Text>Change</Text>
                 </TouchableOpacity>
                 <Image source={karim} style={styles.image} />
             </View>
